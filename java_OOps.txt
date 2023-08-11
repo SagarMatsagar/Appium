@@ -1,0 +1,49 @@
+Java oops concepts
+
+1) Encapsulation
+	Encapsulation means enclose something. just like medical capsule the medical 
+	contains inside of its coting. it similar work in oops.
+
+2)Abstraction
+	Abstraction means Hide unneccessory informstion. the main purpose of absstraction 
+	is hiding unnecesssory details from the user.
+
+3)Inheritance
+	Inheritance is procedure in which a class inherits the attribute and member function 
+	of another class.
+	1)Single level
+		in this inheritance a single derived class inherits the attribute and method of a single base class.
+	2)multilevel
+		in this inheritance a deriverd class created from another derived class.
+	3)hirarchical
+		in this in heritance more than one class inherits the properties of a single base class.
+	4)hybrid
+		in this is a combination of more than one inheritance.
+	*5)Multiple inheritance (Java does not sopport the multiple inheritance because its leads adeadly diamond problame.)
+		 in this inheritance a derived class inherits properties of more than one base classes.
+
+4)Polymorphism
+	polymorphism means ability to perform a single task in many ways.
+	polymorphism have two types: Runtime polymorphism and Compiletime polymorphism
+	i)Compliletime Polymorphism- Method Overloading and Operator overloading
+		* Method overloading
+			In method overloading should have more than one method with same name,
+			same return type,same class but Diff. parameters.
+	ii)Runtime polymorphism - Method Overriding
+		*Method Overriding
+			In method Overriding should have more than one method in diff. class 
+			with same name, same return type, same parameter.
+
+*5) Object
+	Object is instance of class.
+*6)Class
+	Class is blue print of object, class is collection of Data members and member functions.
+
+
+*)Loop
+	loop is a sequance of instructions that is continiously repeated until condition is true.
+
+*)Interface
+	interface is a blueprint of a class. it has static,constant and abstract methods.
+	interface is a machanism to archiveb abstraction.
+	interface can have abstract method and variables. it can not have a method body.

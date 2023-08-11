@@ -1,0 +1,73 @@
+login.java
+
+class Login{
+
+	public stiatic void main(String[] ar){
+		
+	WebDriverManager.chromedriver.setup();
+	WebDriver driver = new ChromeDriver();
+	
+	LoginWOPF l1 = new LoginWOPF(driver);
+	//LoginWPF l2 = new LoginWPF(driver);
+	
+	driver.manage.windows.maximize();
+	driver.get("https://www.saucedemo.com/");
+	
+	l1.enterUserName("standard_user");
+	l1.enterPassword("secret_sauce");
+	l1.clickLoginBtn();
+
+	//l2.enterUserName("standard_user");
+	//l2.enterPassword("secret_sauce");
+	//l2.clickLoginBtn();
+	
+	}
+}
+
+LoginWOPF.java
+
+class LoginWOPF{
+
+	WebDriver driver;
+	LoginWOPF(WebDriver d){
+		driver = d;
+	}
+	
+	By username = By.id("user-name");
+	By password = By.id("password");
+	By loginBtn = By.id("login-button");
+
+	public void enterUserName(String uname){
+		driver.findElement(username).sendKeys(uname);
+	}
+	public void enterPassword(String pass){
+		driver.findElement(password).sendKeys(pass);
+	}
+	public void clickLoginBtn(){
+		driver.findElement(loginBtn).click();
+	}
+}
+
+LoginWPF.java
+
+class LoginWPF{
+	WebDriver driver;
+	LoginWPF(WebDriver d){
+		driver=d;
+		PageFactory.initElement(driver, this);
+	}
+
+	@FindBy(id="user-name")WebElement username;
+	@FindBy(id="password")WebElement password;
+	@FindBy(id="login-button")WebElement loginBtn;
+
+	public void enterUserName(String uname){
+		username.sendKeys(uname);
+	}
+	public void enterPassword(String pass){
+		password.sendKeys(pass);
+	}
+	public void clickLoginBtn(){
+		loginBtn.click();
+	}
+}

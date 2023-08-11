@@ -1,0 +1,58 @@
+
+
+	Selenium Locators
+	
+		 Selenium locators use for spacifying the web elements.
+		
+		1) By Id 		= driver.findElement(By.id(<element id>));			   	<------------------------Syntax
+							driver.findElement(By.id("fname")).sendKeys("JavaTpoint");  <--------------------Example 
+							
+		2) By Name 		= driver.findElement(By.name(<element name>));
+							driver.findElement(By.name("firstName")).sendKeys("Selenium Tutorial");  
+							
+		3) By ClassName 	= driver.findElement(By.className(<element class>));
+							driver.findElement(By.className("Automation")).click();
+							
+		4) By TagName 		= driver.findElement(By.tagName(<html tag>));
+							driver.findElement(By.tagName("input")).sendKeys("C++ Tutorial");  
+		 
+		5) By LinkText 		= driver.findElement(By.linkText(<liktext>));
+							 driver.findElement(By.linkText("This is a Link")).click();
+							 
+		6) By PartialLinkText 	= driver.findElement(By.partialLinkText(<linktext>));
+							driver.findElement(By.partialLinkText("This is")).click();
+							
+		7) By cssSelector	= driver.findElemet(By.cssSelector(<cssselector>));
+							Tag and Id
+								driver.findElement(By.cssSelector("input#fname")).sendKeys("JavaTpoint");
+					S		Tag And ClassName
+								 driver.findElement(By.cssSelector("input.Automation")).click();  
+							Tag and Attribute
+								driver.findElement(By.cssSelector("input[id=fname]")).sendKeys("Selenium Tutorials");
+							Tag class And Attribute
+								driver.findElement(By.cssSelector("input.gsfi[name=q]")).sendKeys("javaTpoint Tutorials"); 
+							SubString Matches
+								driver.findElement(By.cssSelector("input[id^='fna']")).sendKeys("JavaTpoint JMeter Tutorial");
+							
+		8) By Xpath 	= driver.findElement(By.xpath(<xpath>));
+							Using Single slash
+								findElement(By.xpath("html/body/div[1]/div[2]/div[2]/div[1]/form/div[1]/div/div[1]/div/div/input[1]")); 
+							Using Double slash
+								findElement(By.xpath("//form/div[1]/div/div[1]/div/div/input[1]")); 
+							Using single attribute
+								findElement(By.xpath("//*[@id="lst-ib"]"));  
+							Using Multiple attribute 
+								findElement(By.xpath("//<HTML tag>[@attribute_name1='attribute_value1'][@attribute_name2='attribute_value2]")); 
+							Using AND
+								findElement(By.xpath("//*[@id='lst-ib' and @class='gsfi lst-d-f']"));  
+							Using OR
+								findElement(By.xpath("//*[@id='lst-ib' or @class='gsfi lst-d-f']"));
+							Using Contains
+								findElement(By.xpath("//*[contains(@id,'lst-ib')]"));  
+							Using strats with
+								findElement(By.xpath("//*[starts-with(@id,'lst')]"));
+							Using text
+								findElement(By.xpath("//*[text()='Google offered in')]"));  
+							Using last
+								findElement(By.xpath("(//input[@type='text'])[last()]"));
+		
